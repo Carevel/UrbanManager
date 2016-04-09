@@ -10,6 +10,7 @@ namespace UrbanManager.UI.Controllers
     {
         public ActionResult Index()
         {
+            var a = "test";
             return View();
         }
 
