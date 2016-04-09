@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <source value="1" name="监督员上报"></source>
+  <source value="2" name="12319转派"></source>
+  <source value="3" name="公众投诉新增"></source>
+  <source value="5" name="视频上报"></source>
+  <source value="6" name="上级批件"></source>
+  <source value="7" name="媒体监督"></source>
+  <source value="8" name="城建热线"></source>
+  <source value="10" name="12345转派"></source>
+  <source value="11" name="其他上报"></source>
+</root>

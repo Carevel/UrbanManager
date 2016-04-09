@@ -1,0 +1,634 @@
+﻿    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+    }
+html,body,form{ height:100%; width:100%; margin:0; padding:0;}
+body 
+{
+    box-sizing:border-box;
+    overflow: hidden;
+    margin: 0;
+    font-family: SimSun,"Microsoft YaHei" ,微软雅黑, "Microsoft JhengHei" ,华文细黑,STHeiti,MingLiu;
+}
+table
+{
+    box-sizing:border-box;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    table-layout: fixed;
+    cellspacing: 0;
+    cellpadding: 0;
+    border-collapse:collapse;
+    width:100%;
+}
+.tr1 {
+
+
+}
+.tr2 {
+background-color:#eef8ff;
+
+}
+
+.key {
+            text-align: right;
+            color: #0868a4;
+            font-weight: bold;
+             font-size:13px;
+        }
+
+.value {
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+             padding-left:10px;
+        }
+
+/*弹出层样式*/
+.menuContent{
+            background-color: #e0f3ff;
+            border: 1px solid #acdfff;
+            z-index: 1; 
+            overflow-y: auto;
+             height: 300px;
+              width: 300px;
+        }
+/**/
+
+/*查询条件样式*/
+.Conditiondiv {
+            background-color: #e0f3ff;
+            border: 1px solid #acdfff;
+        }
+/**/
+.Conditiondivblue {
+            background-color: #B5E3FF;
+            border: 1px solid #acdfff;
+        }
+.TableListdiv {
+            background-color: #b5e3ff;
+            border-top: 1px solid #acdfff;
+        }
+
+        /*标题行*/
+     .title {
+            width: 100% !important;
+            margin: 0 !important;
+            min-height: 25px !important;
+            text-align: left;
+            color: #0868a4;
+            font-weight: bold;
+            padding-right: 1%;
+        }
+     .v3span {
+            width: 33% !important;
+            margin: 0 !important;
+            min-height: 25px !important;
+            color: #0868a4;
+            white-space: nowrap;
+        }
+/*四列*/
+     .keyspan {
+            width: 8% !important;
+            margin: 2px 0 !important;
+            text-align: right;
+            color: #0868a4;
+            font-weight: bold;
+            padding-right: 1%;
+             font-size:13px;
+        }
+     .keyspan1 {
+            width: 12% !important;
+            margin: 2px 0 !important;
+            text-align: right;
+            color: #0868a4;
+            font-weight: bold;
+            padding-right: 1%;
+             font-size:13px;
+        }
+        .valuespan {
+            width: 16.5% !important;
+            margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+
+        .valuespanx2 {
+            width: 41% !important;
+           margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+
+        .valuespanx3 {
+            width: 65.5% !important;
+            margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+        .valuespanx4 {
+            width: 90% !important;
+            margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+/*三列*/
+     .key3span {
+            width: 11% !important;
+            margin: 2px 0 !important;
+            text-align: right;
+            color: #0868a4;
+            font-weight: bold;
+            padding-right: 1%;
+             font-size:13px;
+        }
+
+        .value3span {
+            width: 21% !important;
+            margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+
+        .value3spanx2 {
+            width: 53% !important;
+            margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+
+        .value3spanx3 {
+            width: 85% !important;
+            margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+/*两列*/
+     .key2span {
+            width: 16% !important;
+            margin: 2px 0 !important;
+            text-align: right;
+            color: #0868a4;
+            font-weight: bold;
+            padding-right: 1%;
+             font-size:13px;
+        }
+
+        .value2span {
+            width: 32% !important;
+            margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+
+        .value2spanx2 {
+            width: 80% !important;
+            margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+
+
+
+        input {
+            height: 19px;
+            width: 100%;
+            border: 1px solid #acdfff;
+            color: #0868a4;
+            padding:0;
+            margin:0;
+        }
+
+       input[readonly] {
+            cursor: default;
+        }
+
+        input[disabled] {
+            cursor:default;
+        }
+        select[readonly] {
+            cursor: default;
+        }
+        select[disabled] {
+            cursor:default;
+        }
+
+        .input {
+            height: 19px;
+            width: 100%;
+            border: 1px solid #acdfff;
+            color: #0868a4;
+            padding:0;
+            margin:0;
+        }
+        .textarea {
+            width: 100%;
+            border: 1px solid #acdfff;
+            color: #0868a4;
+            padding:0;
+            margin:0;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        .select {
+            width: 100%;
+            height: 19px;
+            border: 1px solid #acdfff;
+            color: #0868a4;
+            padding: 0;
+            margin: 0;
+            border-radius: 0px;
+        }
+        .select1 {
+            width: 160px;
+            height: 19px;
+            border: 1px solid #acdfff;
+            color: #0868a4;
+            padding: 0;
+            margin: 0;
+            border-radius: 0px;
+        }
+        .select2 {
+            width: 100%;
+            height: 19px;
+            border: 1px solid #acdfff;
+            color: #0868a4;
+            padding: 0;
+            margin: 0;
+            border-radius: 0px;
+        }
+        .buttonblue {
+            background-color: #428bca;
+            width: 82px !important;
+            height: 28px;
+            color: #fff;
+            border: none;
+        }
+        .buttongreen {
+            background-color: #69c477;
+            width: 82px !important;
+            height: 28px;
+            color: #fff;
+            border: none;
+        }
+        .buttonred {
+            background-color: #e6785f;
+            width: 82px !important;
+            height: 28px;
+            color: #fff;
+            border: none;
+        }
+.required {
+  color:red;
+  margin-right:-8px;
+  float:right;
+  position:relative;
+  top:-1px;
+  font-weight:normal;
+  font-size:12px;
+}
+
+
+
+/*普通列表*/
+.tablelist {
+    box-sizing:border-box;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    table-layout: fixed;
+    cellspacing: 0;
+    cellpadding: 0;
+    border: none;
+    border-collapse:collapse;
+    width:100%;
+    text-align:center;
+    color:#0868a4;
+    font-size:13px;
+}
+    .tablelist tr td {
+    height:30px;
+    border-bottom:1px solid #b5e3ff;
+    }
+    .tablelist tr th {
+    height:30px;
+    background-color:#489bcf;
+    border-bottom:1px solid #b5e3ff;
+    color:#fff;
+    }
+.overflowtd {
+            text-overflow:ellipsis; 
+            white-space: nowrap; 
+            overflow: hidden; 
+            
+            }
+.basicinfotable {
+    position: relative; 
+    top: -45px; 
+    border-bottom: 1px dashed  #b5e3ff;
+
+}
+.basicinfotable tr td {
+     text-overflow:ellipsis; 
+     white-space: nowrap; 
+     overflow: hidden; 
+     vertical-align:middle;
+}
+
+/*下拉操作按钮*/
+ .div_a {
+            width: 85px;
+            float: left;
+        }
+
+            .div_a span {
+                position: relative;
+                top: 4px;
+                left: 11px;
+
+            }
+
+            .div_a ul {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+            }
+
+
+            .div_a li {
+                width: 85px;
+                height: 28px;
+                background: url(../Images_flat/tasklistimg/btnbg.jpg);
+                color: #fff;
+                cursor: pointer;
+                /*float: left;*/
+                text-align:left;
+            }
+       .buttonOperate {
+                width: 85px;
+                height: 28px;
+                background: url(../Images_flat/tasklistimg/btnbg.jpg);
+                color: #fff;
+                cursor: pointer;
+                padding-left:30px;
+                /*float: left;*/
+                text-align:left;
+           }
+        .div_a1 {
+            width: 85px;
+            position: relative;
+            background-color: #FFF;
+            top: -20px;
+            left: 0px;
+            z-index: 999;
+            display:none;
+            border-top: 1px solid #428bca;
+            border-bottom: 1px solid #428bca;
+        }
+
+        .div_a li:hover .div_a1 {
+            display: block;
+        }
+
+        .div_a1 ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            display:inline-block;
+        }
+
+            .div_a1 ul li {
+            }
+
+                .div_a1 ul li a {
+                    width: 83px;
+                    height: 28px;
+                    display: block;
+                    background-color: #fff;
+                    color: #428bca;
+                    text-decoration: none;
+                    border-left: 1px solid #428bca;
+                    border-right: 1px solid #428bca;
+                    text-align:left;
+                }
+
+                    .div_a1 ul li a:hover {
+                        background-color: #428bca;
+                        color: #fff;
+                    }
+
+                .div_a1 ul li span {
+                    position: relative;
+                    top: 4px;
+                    left: 11px;
+ /*tab标签*/               }
+.tabsl_gis {
+            width: 100%;
+            margin: 0px auto; /* margin: 40px auto;*/
+            position: absolute;
+        }
+
+        /* tabbtn */
+.tabbtn {
+            height: 28px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            margin-bottom:1px;
+        }
+
+.tabbtn li {
+                float: left;
+                position: relative;
+                margin-right:1px;
+            }
+
+.tabbtn li a {
+                    width: 100px;
+                    height: 28px;
+                    line-height: 28px;
+                    color: #FFF;
+                    text-decoration: none;
+                    text-align: center;
+                    background-color: #00ba97;
+                    display:block;
+                    blr:expression(this.onFocus=this.blur()); /* IE Opera */ 
+                    outline:none; 
+                    -moz-outline-style: none; /* FF */
+                    font-family: "Microsoft YaHei" ,微软雅黑, "Microsoft JhengHei" ,华文细黑,STHeiti,MingLiu;
+                    font-size:14px;
+                    font-weight:bold;
+                }
+
+.tabbtn li.current a {
+                        width: 100px;
+                        height: 28px;
+                        line-height: 28px;
+                        color: #FFF;
+                        text-decoration: none;
+                        text-align: center;
+                        background-color: #428bca;
+                        display:block;
+                        blr:expression(this.onFocus=this.blur()); /* IE Opera */ 
+                        outline:none; 
+                        -moz-outline-style: none; /* FF */
+                        font-family: "Microsoft YaHei" ,微软雅黑, "Microsoft JhengHei" ,华文细黑,STHeiti,MingLiu;
+                        font-size:14px;
+                        font-weight:bold;
+                    }
+.gisiframe
+{
+    width: 100%;
+}
+        .Operateright {
+            float: right;
+            width: 310px;
+            height: 100%;
+            _margin-left: -3px;
+            background-color: #b5e3ff;
+            overflow:auto;
+            overflow-x:hidden;
+        }
+
+        .Operateleft {
+            height: 100%;
+            width: auto;
+            margin-right: 310px;
+            _margin-right: 307px;
+                        overflow:auto;
+                                    overflow-x:hidden;
+        }
+.navdiv {
+    position: absolute; 
+    top: 7px; 
+    left: 14px;
+    font-family: SimSun,"Microsoft YaHei" ,微软雅黑, "Microsoft JhengHei" ,华文细黑,STHeiti,MingLiu;
+    font-size:12px;
+    width:100%;
+}
+.navdiv span {
+    position:relative; 
+    top: 1px; 
+    left: 2px;
+    white-space: nowrap;
+    }
+
+#CaseProgressdiv {
+width:100%;
+
+}
+
+.pin {
+width:15px !important;
+border:none;
+height:15px;
+background:url(../Images_flat/pin.png);
+}
+
+/*
+ * Poshy Tip jQuery plugin v1.1
+ * http://vadikom.com/tools/poshy-tip-jquery-plugin-for-stylish-tooltips/
+ * Copyright 2010-2011, Vasil Dinkov, http://vadikom.com/
+ */
+
+.tip-yellow {
+	z-index:1000;
+	text-align:left;
+	border:1px solid #939393;
+	padding:7px;
+	min-width:50px;
+	max-width:530px;
+	color:#8c3901;
+	background-color:#fff;
+        border-radius:4px;
+    border:3px solid #1a8dd5;
+
+	/**
+	 * - If you set a background-image, border/padding/background-color will be ingnored.
+	 *   You can set any padding to .tip-inner instead if you need.
+	 * - If you want a tiled background-image and border/padding for the tip,
+	 *   set the background-image to .tip-inner instead.
+	 */
+}
+.tip-yellow .tip-inner {
+    font-family: SimSun,"Microsoft YaHei" ,微软雅黑, "Microsoft JhengHei" ,华文细黑,STHeiti,MingLiu;
+    font-size:16px;
+	margin-top:-2px;
+	padding:0 3px 1px 3px;
+    color:#0868a4;}
+/* Configure an arrow image - the script will automatically position it on the correct side of the tip */
+.tip-yellow .tip-arrow-top {
+	margin-top:-10px;
+	margin-left:15px;
+	top:0;
+	left:0;
+	width:16px;
+	height:10px;
+	background:url(tip-yellow_arrows.png) no-repeat;
+}
+.tip-yellow .tip-arrow-right {
+	margin-top:-9px; /* approx. half the height to center it */
+	margin-left:-4px;
+	top:50%;
+	left:100%;
+	width:10px;
+	height:20px;
+	background:url(tip-yellow_arrows.png) no-repeat -16px 0;
+}
+.tip-yellow .tip-arrow-bottom {
+	margin-top:0px;
+	margin-left:15px;
+	top:100%;
+	left:0;
+	width:16px;
+	height:13px;
+	background:url(tip-yellow_arrows.png) no-repeat -32px 0;
+}
+.tip-yellow .tip-arrow-left {
+	margin-top:-9px; /* approx. half the height to center it */
+	margin-left:0px;
+	top:50%;
+	left:0;
+	width:10px;
+	height:20px;
+	background:url(tip-yellow_arrows.png) no-repeat -48px 0;
+}
+
+.taskiconope {
+margin:0 4px 0 0;
+
+}
+
+#imghtmldiv img {
+height:23px;
+}
+/*
+ * Poshy Tip jQuery plugin v1.1
+ * http://vadikom.com/tools/poshy-tip-jquery-plugin-for-stylish-tooltips/
+ * Copyright 2010-2011, Vasil Dinkov, http://vadikom.com/
+ */
+
+/*div.zTreeDemoBackground {width:250px;height:362px;text-align:left;}
+
+ul.ztree {margin-top: 10px;border: 1px solid #617775;background: #f0f6e4;width:220px;height:360px;overflow-y:scroll;overflow-x:auto;}*/
+
+.TotalLightlevel1{
+     background: url(../Images_flat/tasklistimg/level1.jpg) repeat-y;}
+.TotalLightlevel2{
+     background: url(../Images_flat/tasklistimg/level2.jpg) repeat-y;}
+.TotalLightlevel3{
+     background: url(../Images_flat/tasklistimg/level3.jpg) repeat-y;}
+.TotalLightlevel4{
+     background: url(../Images_flat/tasklistimg/level4.jpg) repeat-y;}

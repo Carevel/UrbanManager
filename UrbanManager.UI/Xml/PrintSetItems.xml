@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<printSettings>
+  <listItem id="01" name="打印GIS地图" />
+  <listItem id="02" name="打印上报图片" />
+  <listItem id="03" name="打印核查图片" />
+</printSettings>

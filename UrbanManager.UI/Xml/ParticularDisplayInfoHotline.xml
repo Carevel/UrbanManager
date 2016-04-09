@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<table>
+  <tabletr name="tr1" class="none" style="none">
+    <tdData>
+      <columnname></columnname>
+      <viewdata>任务编号</viewdata>
+      <columnclass></columnclass>
+      <viewclass></viewclass>
+      <columndisplay></columndisplay>
+    </tdData>
+    <tdData>
+      <columnname></columnname>
+      <viewdata>案卷编号</viewdata>
+      <columnclass></columnclass>
+      <viewclass></viewclass>
+      <columndisplay></columndisplay>
+    </tdData>
+    <tdData>
+      <columnname></columnname>
+      <viewdata></viewdata>
+      <columnclass></columnclass>
+      <viewclass></viewclass>
+      <columndisplay></columndisplay>
+    </tdData>
+  </tabletr>
+  <tabletr name="tr2" class="" style="">
+    <tdData>
+      <columnname></columnname>
+      <viewdata>问题来源</viewdata>
+      <columnclass></columnclass>
+      <viewclass></viewclass>
+      <columndisplay></columndisplay>
+    </tdData>
+    <tdData>
+      <columnname></columnname>
+      <viewdata>发现时间</viewdata>
+      <columnclass></columnclass>
+      <viewclass></viewclass>
+      <columndisplay></columndisplay>
+    </tdData>
+    <tdData>
+      <columnname></columnname>
+      <viewdata>案件类别</viewdata>
+      <columnclass></columnclass>
+      <viewclass></viewclass>
+      <columndisplay></columndisplay>
+    </tdData>
+  </tabletr>
+</table>

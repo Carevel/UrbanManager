@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ColumnnameFile xmlns="http://tempuri.org/ColumnnameFile.xsd">
+  <DataTable Name="T_INFO_DISPATCH">
+    <Data>
+      <columnname>'派遣'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_FORMATDAYSTOMINUTES(T_INFO_DISPATCH.CARRIVETIME,T_INFO_MAIN.INFOSOURCEID,T_INFO_MAIN.URGENTDEGREE,F_REC_MainIsStandard(T_INFO_MAIN.INFOBCCODE,T_INFO_MAIN.INFOSCCODE,T_INFO_MAIN.INFOZCCODE, T_INFO_MAIN.INFOTYPEID))</columnname>
+      <viewdata>"到场时限"</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_FORMATDAYSTOMINUTES(T_INFO_DISPATCH.CSOLVINGTIME,T_INFO_MAIN.INFOSOURCEID,T_INFO_MAIN.URGENTDEGREE,F_REC_MainIsStandard(T_INFO_MAIN.INFOBCCODE,T_INFO_MAIN.INFOSCCODE,T_INFO_MAIN.INFOZCCODE, T_INFO_MAIN.INFOTYPEID))</columnname>
+      <viewdata>"处理时限"</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DISPATCH.INSERTTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>派遣时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_DISPATCH_PARTMAIN(T_INFO_DISPATCH.ID)</columnname>
+      <viewdata>主责部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_DISPATCH_PARTSUB(T_INFO_DISPATCH.ID)</columnname>
+      <viewdata>协办部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_DISPATCH.DISPATCHNOTE</columnname>
+      <viewdata>派遣备注$</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_SOLVING_WANGGE">
+    <Data>
+      <columnname>'接单'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_FORMATDAYSTOMINUTES(T_INFO_SOLVING.CArriveTime,T_INFO_MAIN.INFOSOURCEID,T_INFO_MAIN.URGENTDEGREE,F_REC_MainIsStandard(T_INFO_MAIN.INFOBCCODE,T_INFO_MAIN.INFOSCCODE,T_INFO_MAIN.INFOZCCODE, T_INFO_MAIN.INFOTYPEID))</columnname>
+      <viewdata>到场时限</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_FORMATDAYSTOMINUTES(T_INFO_SOLVING.CSOLVINGTIME,T_INFO_MAIN.INFOSOURCEID,T_INFO_MAIN.URGENTDEGREE,F_REC_MainIsStandard(T_INFO_MAIN.INFOBCCODE,T_INFO_MAIN.INFOSCCODE,T_INFO_MAIN.INFOZCCODE, T_INFO_MAIN.INFOTYPEID))</columnname>
+      <viewdata>处理时限</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_SOLVING.AcceptTime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>接单时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.AcceptNote</columnname>
+      <viewdata>接单备注$</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_SOLVING">
+    <Data>
+      <columnname>'接单'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_FORMATDAYSTOMINUTES(T_INFO_SOLVING.CArriveTime,T_INFO_MAIN.INFOSOURCEID,T_INFO_MAIN.URGENTDEGREE,F_REC_MainIsStandard(T_INFO_MAIN.INFOBCCODE,T_INFO_MAIN.INFOSCCODE,T_INFO_MAIN.INFOZCCODE, T_INFO_MAIN.INFOTYPEID))</columnname>
+      <viewdata>到场时限</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_FORMATDAYSTOMINUTES(T_INFO_SOLVING.CSOLVINGTIME,T_INFO_MAIN.INFOSOURCEID,T_INFO_MAIN.URGENTDEGREE,F_REC_MainIsStandard(T_INFO_MAIN.INFOBCCODE,T_INFO_MAIN.INFOSCCODE,T_INFO_MAIN.INFOZCCODE, T_INFO_MAIN.INFOTYPEID))</columnname>
+      <viewdata>处理时限</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_SOLVING.AcceptTime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>接单时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.AcceptNote</columnname>
+      <viewdata>接单备注$</viewdata>
+    </Data>
+    <Data>
+      <columnname> (CASE T_INFO_SOLVING.ISCONTACT WHEN 1 THEN '已联' WHEN 0 THEN '未联' END) </columnname>
+      <viewdata>是否先行联系</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (FIRSTCONTACTTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>先行联系时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.CONTACTPERSON</columnname>
+      <viewdata>联系人</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(T_INFO_SOLVING.NONCONTACTREASON,'065')</columnname>
+      <viewdata>未联原因</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_SOLVING_BACK">
+    <Data>
+      <columnname>'退单'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_SOLVING.RejectTime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>退单时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.RejectNote</columnname>
+      <viewdata>退单备注$</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_SHOUDAN">
+    <Data>
+      <columnname>'收单'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.REQUESTDATE, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>收单时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>f_rec_deptname_bydeptcode(T_INFO_DELAY.CHECKNOTE)</columnname>
+      <viewdata>被收单部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_DELAY.REQUESTNOTE</columnname>
+      <viewdata>收单意见$</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_Hotline_Feedback_12345">
+    <Data>
+      <columnname>TASKID</columnname>
+      <viewdata>任务号</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_INFOSOURCEname(INFOSOURCEID)</columnname>
+      <viewdata>问题来源</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(FIRST_CONTACT,'065')</columnname>
+      <viewdata>是否先行联系</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (FEEDBACKTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>先行联系时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>FIRST_CONTACTOR</columnname>
+      <viewdata>联系人</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(FACT,'066')</columnname>
+      <viewdata>事实认定</viewdata>
+    </Data>
+    <Data>
+      <columnname>FACT_EXPLAIN</columnname>
+      <viewdata>事实认定说明</viewdata>
+    </Data>
+    <Data>
+      <columnname>REPLY_POINT</columnname>
+      <viewdata>答复要点</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(REPLY_TYPE,'013')</columnname>
+      <viewdata>答复方式</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (REPLY_TIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>答复时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(IS_PUBLIC,'069')</columnname>
+      <viewdata>是否公开</viewdata>
+    </Data>
+    <Data>
+      <columnname>LEVEL2_HANDLER</columnname>
+      <viewdata>二级承办经办人</viewdata>
+    </Data>
+    <Data>
+      <columnname>LEVEL2_CHARGER</columnname>
+      <viewdata>二级承办负责人</viewdata>
+    </Data>
+    <Data>
+      <columnname>BADGING_UNIT</columnname>
+      <viewdata>落款单位</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(BANLIRESULT,'022')</columnname>
+      <viewdata>办理结果</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR(ARRIVETIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>现场查看</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(APPEAL,'067')</columnname>
+      <viewdata>诉求认定</viewdata>
+    </Data>
+    <Data>
+      <columnname>APPEAL_EXPLAIN</columnname>
+      <viewdata>诉求认定说明</viewdata>
+    </Data>
+    <Data>
+      <columnname>DESCRIPTION</columnname>
+      <viewdata>反馈结论</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_REC_USERNAME(INSERTUSER)</columnname>
+      <viewdata>操作人</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (INSERTTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>操作时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata></viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata></viewdata>
+    </Data>
+
+  </DataTable>
+  <DataTable Name="T_INFO_FEEDBAK">
+    <Data>
+      <columnname>T_INFO_FEEDBAK.TaskID</columnname>
+      <viewdata>任务编号</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_FEEDBAK.Inserttime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>反馈时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_FEEDBAK.ENDRESULT</columnname>
+      <viewdata>反馈结论</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(T_INFO_FEEDBAK.BANLIRESULT,'022')</columnname>
+      <viewdata>办理结果</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_FEEDBAK.LookTime</columnname>
+      <viewdata>现场勘查日期</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_FEEDBAK.TELEPHONE</columnname>
+      <viewdata>勘察人联系电话</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_FEEDBAK.CJPERSON</columnname>
+      <viewdata>承办单位经办人</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_FEEDBAK.CFPERSON</columnname>
+      <viewdata>承办单位负责人</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_BACK">
+    <Data>
+      <columnname>T_INFO_BACK.TASKID</columnname>
+      <viewdata>任务编号</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    
+    <Data>
+      <columnname>TO_CHAR (T_INFO_BACK.INSERTTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>退回时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_BACK.BACKNOTE</columnname>
+      <viewdata>退回理由</viewdata>
+    </Data>
+   
+  </DataTable>
+  <DataTable Name="T_INFO_FEEDBAKTOW">
+    <Data>
+      <columnname>T_INFO_FEEDBAK.TaskID</columnname>
+      <viewdata>任务编号</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_FEEDBAK.Inserttime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>反馈时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_FEEDBAK.ENDRESULT</columnname>
+      <viewdata>反馈结论</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(T_INFO_FEEDBAK.BANLIRESULT,'022')</columnname>
+      <viewdata>办理结果</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_NOTTOPDA">
+    <Data>
+      <columnname>'无需核查进入待结案'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_NOTTOPDA.Inserttime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>操作时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_NOTTOPDA.note</columnname>
+      <viewdata>操作备注</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_SOLVINGS_HOTLINE">
+    <Data>
+      <columnname>'处理'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_SOLVING.SolvingTime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>处理完成时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.SolvingPerson</columnname>
+      <viewdata>处理人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(TO_CHAR(T_INFO_SOLVING.SOLVINGRESULT),'011')</columnname>
+      <viewdata>处理结果</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.ArrivePerson</columnname>
+      <viewdata>到场人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+    <Data>
+      <columnname> (CASE T_INFO_SOLVING.ISCONTACT WHEN 1 THEN '已联' WHEN 0 THEN '未联' END) </columnname>
+      <viewdata>是否先行联系</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (FIRSTCONTACTTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>先行联系时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.CONTACTPERSON</columnname>
+      <viewdata>联系人</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>FN_GET_CODENAME(T_INFO_SOLVING.NONCONTACTREASON,'065')</columnname>
+      <viewdata>未联原因$</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.CITIZEN_FEEDBACKNOTE</columnname>
+      <viewdata>市民反馈说明</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_GETHUIFUSTYLE(HUIFUSTYLE)</columnname>
+      <viewdata>回复形式</viewdata>
+    </Data>
+    <Data>
+      <columnname>F_GETMANYITYPENew(T_INFO_SOLVING.MANYITYPE)</columnname>
+      <viewdata>回访态度</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.SolvingNote</columnname>
+      <viewdata>回复内容$</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>TO_CHAR(T_INFO_SOLVING.REPLYTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>答复时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.REPLYNOTE</columnname>
+      <viewdata>答复要点</viewdata>
+    </Data>
+    <Data>
+      <columnname> FN_GET_CODENAME(T_INFO_SOLVING.ISOPEN,'069') </columnname>
+      <viewdata>是否公开</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>FN_GET_CODENAME(T_INFO_SOLVING.FACTTYPE,'066') </columnname>
+      <viewdata>事实认定</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.FACTNOTE</columnname>
+      <viewdata>事实认定说明</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+    <Data>
+      <columnname> FN_GET_CODENAME(T_INFO_SOLVING.APPEALTYPE,'067')</columnname>
+      <viewdata>诉求认定</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.APPEALNOTE</columnname>
+      <viewdata>诉求认定说明</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>  FN_GET_CODENAME(T_INFO_SOLVING.SCENETYPE,'068') </columnname>
+      <viewdata>现场查看</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.BranchLeaders</columnname>
+      <viewdata>分管领导</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_SOLVINGS">
+    <Data>
+      <columnname>T_INFO_SOLVING.TaskID</columnname>
+      <viewdata>任务编号</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_SOLVING.AcceptTime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>接单时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_SOLVING.SolvingTime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>处理完成时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(TO_CHAR(T_INFO_SOLVING.SOLVINGRESULT),'011')</columnname>
+      <viewdata>处理结果</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.SolvingPerson</columnname>
+      <viewdata>处理人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>FN_GET_CODENAME(HUIFUSTYLE,'013')</columnname>
+      <viewdata>回复形式</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_INFO_SOLVING.SolvingNote</columnname>
+      <viewdata>回复内容</viewdata>
+    </Data>
+    
+  </DataTable>
+  <DataTable Name="T_INFO_SUPERVISE">
+    <Data>
+      <columnname>'督办'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>TO_CHAR (T_INFO_SUPERVISE.Inserttime, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>督办时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>T_INFO_SUPERVISE.SuperviseNote</columnname>
+      <viewdata>督办备注$</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_DELAY">
+    <Data>
+      <columnname>'申请缓办'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.REQUESTDATE, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>申请时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>(case when T_INFO_DELAY.DELAYHOURS>0 then F_FORMATDAYSTOMINUTESBYALLDAY(T_INFO_DELAY.DELAYHOURS) else '不限制' end)</columnname>
+      <viewdata>延长时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>T_INFO_DELAY.REQUESTNOTE</columnname>
+      <viewdata>申请理由$</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_DELAYTOW">
+    <Data>
+      <columnname>'申请延期'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>(case when T_INFO_DELAY.APPLYDELAYHOURS>0 then F_FORMATDAYSTOMINUTESBYALLDAY(T_INFO_DELAY.APPLYDELAYHOURS) else '不限制' end)</columnname>
+      <viewdata>申请天数</viewdata>
+    </Data>
+    <Data>
+      <columnname>(case when T_INFO_DELAY.DELAYHOURS>0 then F_FORMATDAYSTOMINUTESBYALLDAY(T_INFO_DELAY.DELAYHOURS) else '不限制' end)</columnname>
+      <viewdata>审核天数</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.REQUESTDATE, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>申请时间</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>T_INFO_DELAY.REQUESTNOTE</columnname>
+      <viewdata>申请理由$</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.EXPECTLASTSOLVINGTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>预期最终处理时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.LASTSOLVINGTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>最终处理时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_DELAYback">
+    <Data>
+      <columnname>'申请退单'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.REQUESTDATE, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>申请时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>T_INFO_DELAY.REQUESTNOTE</columnname>
+      <viewdata>申请理由$</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_DELAYS">
+    <Data>
+      <columnname>'审核'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>F_REC_DEPTNAME(DELAYDEPTCODE)</columnname>
+      <viewdata>申请部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.CHECKDATE, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>审核时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>T_INFO_DELAY.CHECKNOTE</columnname>
+      <viewdata>审核备注$</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>(case T_INFO_DELAY.CHECKRESULT when '1' then '批准' when '2' then '不批准' when '3' then '批准'  end) </columnname>
+      <viewdata>审核情况</viewdata>
+    </Data>
+    <Data>
+      <columnname> (case T_INFO_DELAY.ISUPWARD when 0 then '否' when 1 then '是' end) </columnname>
+      <viewdata>是否向上级申请</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+  </DataTable>
+  <DataTable Name="T_INFO_DELAYSTOW">
+    <Data>
+      <columnname>'批准延期'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_USER.USERNAME</columnname>
+      <viewdata>操作人员</viewdata>
+    </Data>
+    <Data>
+      <columnname>T_DEPTSINFO.DEPTNAME</columnname>
+      <viewdata>所属部门</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>F_REC_DEPTNAME(DELAYDEPTCODE)</columnname>
+      <viewdata>申请部门</viewdata>
+    </Data>
+    <Data>
+      <columnname>(case when T_INFO_DELAY.APPLYDELAYHOURS>0 then F_FORMATDAYSTOMINUTESBYALLDAY(T_INFO_DELAY.APPLYDELAYHOURS) else '不限制' end)</columnname>
+      <viewdata>申请天数</viewdata>
+    </Data>
+    <Data>
+      <columnname>(case when T_INFO_DELAY.DELAYHOURS>0 then F_FORMATDAYSTOMINUTESBYALLDAY(T_INFO_DELAY.DELAYHOURS) else '不限制' end)</columnname>
+      <viewdata>审核天数</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.CHECKDATE, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>审核时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>T_INFO_DELAY.CHECKNOTE</columnname>
+      <viewdata>审核备注$</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>(case T_INFO_DELAY.CHECKRESULT when '1' then '批准' when '2' then '不批准' end) </columnname>
+      <viewdata>审核情况</viewdata>
+    </Data>
+    <Data>
+      <columnname> (case T_INFO_DELAY.ISUPWARD when 0 then '否' when 1 then '是' end) </columnname>
+      <viewdata>是否向上级申请</viewdata>
+    </Data>
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.EXPECTLASTSOLVINGTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>预期最终处理时间</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>TO_CHAR (T_INFO_DELAY.LASTSOLVINGTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>最终处理时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+  </DataTable>
+  <DataTable Name="T_Info_QueryCase">
+    <Data>
+      <columnname>'网上公开评价'</columnname>
+      <viewdata>操作</viewdata>
+    </Data>
+    <Data>
+      <columnname>case USEREVALUATE when 1 then '不满意' when 2 then '一般' when 3 then '基本满意' when 4 then '非常满意' end</columnname>
+      <viewdata>办理质量满意度</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>EVALUATENOTE</columnname>
+      <viewdata>评价意见$</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>TO_CHAR (INSERTTIME, 'yyyy-mm-dd hh24:mi')</columnname>
+      <viewdata>评价时间</viewdata>
+    </Data>
+    <Data>
+      <columnname>QUERYCODE</columnname>
+      <viewdata>流水号</viewdata>
+    </Data>
+    <Data>
+      <columnname>case PATHWAY when 1 then '962000' when 2 then '总门户' when 3 then  '流水号专题门户' when 4 then '党务公开网' when 5 then '网上公开' end </columnname>
+      <viewdata>查询途径</viewdata>
+    </Data>
+
+    <Data>
+      <columnname>case USEREVALUATE2 when 1 then '不满意' when 2 then '一般' when 3 then '基本满意' when 4 then '非常满意' end</columnname>
+      <viewdata>服务态度满意度</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+    <Data>
+      <columnname>''</columnname>
+      <viewdata>空#</viewdata>
+    </Data>
+
+  </DataTable>
+</ColumnnameFile>

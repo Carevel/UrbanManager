@@ -1,0 +1,41 @@
+﻿ .valuespan {
+            width: 16.5% !important;
+            margin: 2px 0 !important;
+            color: #0868a4;
+            /*white-space: nowrap;*/
+             font-size:13px;
+        }
+
+
+ .keyspan {
+            width: 10% !important;
+            margin: 2px 0 !important;
+            text-align: right;
+            color: #0868a4;
+            font-weight: bold;
+            padding-right: 1%;
+             font-size:13px;
+        }
+
+
+ .select {
+            width: 100%;
+            height: 19px;           
+            color: #0868a4;
+            padding: 0;
+            margin: 0;
+            border-radius: 0px;
+        }
+
+  .buttonblue {
+            background-color: #428bca;
+            width: 82px !important;
+            height: 28px;
+            color: #fff;
+            border: none;
+        }
+
+.Conditiondiv {
+            background-color: #e0f3ff;
+            
+        }

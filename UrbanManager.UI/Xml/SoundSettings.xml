@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<soundSettings>
+  <listItem id="1" name="监督员上报" sql="select max(UpdateTime) from t_Info_Main where InfoSourceId=1 and Status=0 and Heshi in (0,2) and DeptCode='{0}'" deptType="1" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/监督员有新的上报数据了.wav"/>
+  <listItem id="2" name="12319上报" sql="select max(UpdateTime) from t_Info_Main where InfoSourceId=2 and Status=0 and Heshi in (0,2) and DeptCode='{0}'" deptType="1" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/12319有上报数据了.wav"/>
+  <listItem id="4" name="待立案" sql="select max(UpdateTime) from t_Info_Main where Status=3 and Heshi in (0,2) and DeptCode='{0}'" deptType="1" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/有立案信息了.wav"/>
+  <listItem id="5" name="待派遣" sql="select max(UpdateTime) from t_Info_Main where Status=4 and DeptCode='{0}'" deptType="1" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/有需要派遣的数据了.wav"/>
+  <listItem id="6" name="待督办" sql="select max(m.UpdateTime) from t_Info_Main m Inner Join t_Info_Dispatch d On m.TaskId=d.TaskId where m.Status=5 and m.Hecha in (0,2) and m.DeptCode='{0}' And d.dispatchsum=0" deptType="1" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/有需要的督办的数据了.wav"/>
+  <listItem id="8" name="待结案" sql="select max(UpdateTime) from t_Info_Main where Status=8 and Hecha in (0,2) and DeptCode='{0}'" deptType="1" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/有需要结案的数据了.wav"/>
+  <listItem id="9" name="待缓办(延期)审核" sql="select max(UpdateTime) from t_Info_Solving where (Status=4 or Status=6) and DeptCode='{0}'"  deptType="1" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/有案件申请缓办延期了.wav"/>
+  <listItem id="10" name="待接单" sql="select max(UpdateTime) from t_Info_Solving where Status=0 and DeptCode='{0}'" deptType="4" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/有需要派遣的数据了.wav"/>
+  <listItem id="11" name="待处理" sql="select max(UpdateTime) from t_Info_Solving where Status=1 and DeptCode='{0}'" deptType="4" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/有需要派遣的数据了.wav"/>
+  <listItem id="12" name="退单审核" sql="select max(UpdateTime) from t_Info_Solving where  Status=10   and DeptCode='{0}'"  deptType="1" lastInsertTime="1900-01-01 00:00:00" soundFile="../Images/wav/有案件申请缓办延期了.wav"/>
+</soundSettings>

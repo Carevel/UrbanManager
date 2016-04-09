@@ -1,0 +1,70 @@
+﻿#divbox div {
+            float: left;
+            padding: 0px 0px;
+        }
+
+        .fpcusimg {
+            margin: 0;
+            height: 252px;
+        }
+.mediatitle {
+ background-color:#0868a4;
+ height:30px;
+ color:#fff;
+margin-bottom:1px;
+font-size:16px;
+line-height:30px;
+}
+
+.imgDilg {
+    width:250px;
+    height:250px;
+    border:1px solid #808080;
+}
+.cutline{
+    width:58px;
+    height:58px;
+    border:1px solid #808080;
+    cursor:pointer;
+}
+        .focusbtn {
+            position:absolute;
+            top:130px;
+            height: 66px;
+            width: 252px;
+        }
+
+        .focusbtnl, .focusbtnr {
+            width: 20px;
+            height: 66px;
+            display: inline-block;
+            cursor: pointer;
+            background: url(../Images_flat/left.jpg) no-repeat;
+            float: left;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+
+        .focusbtnr {
+            background: url(../Images_flat/right.jpg) no-repeat;
+            float: right;
+            margin-right:0px;
+        }
+
+        .focusbuttom {
+            position:absolute;
+            top:253px;
+            height: 30px;
+            width: 252px;
+            background-color:#070d04;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+
+        .buttomText {
+            float: right;
+            padding-right: 10px;
+            font-size: 12px;
+            color: #FFF;
+            line-height: 28px;
+        }

@@ -1,0 +1,97 @@
+﻿body 
+{
+    box-sizing:border-box;
+    overflow: hidden;
+    margin: 0;
+    font-family: SimSun,"Microsoft YaHei" ,微软雅黑, "Microsoft JhengHei" ,华文细黑,STHeiti,MingLiu;
+}
+table
+{
+    box-sizing:border-box;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    table-layout: fixed;
+    cellspacing: 0;
+    cellpadding: 0;
+    border: none;
+    border-collapse:collapse;
+    width:100%;
+}
+
+        .divcenter {
+            position: absolute; /*层漂浮*/
+            top: 50%;
+            left: 50%;
+            width: 562px;
+            height: 360px;
+            margin-top: -180px; /*注意这里必须是DIV高度的一半*/
+            margin-left: -231px; /*这里是DIV宽度的一半*/
+            background: URL(../Images_flat/loginbg.png) no-repeat;
+        }
+
+        #logintab {
+            border-spacing: 0;
+            width: 562px;
+            height: 360px;
+            padding: 0;
+            margin: 0;
+            table-layout: fixed;
+            cellspacing: 0;
+            cellpadding: 0;
+            border: none;
+        }
+
+        .mainloginbutbg {
+            /*background: #a9c1db;*/
+            background: #fff;
+            width: 231px !important;
+            height: 32px !important;
+            border: none !important;
+            outline:none;
+            vertical-align:middle;
+            margin:0;
+            padding:0;
+            font-size:14px;
+            line-height:32px;
+            color:#000;
+        }
+   a:focus, *:focus {noFocusLine: expression(this.onFocus=this.blur());} 
+ 
+
+
+        #rememberrme {
+            position: relative;
+            top: 10px;
+            left: 4px;
+            white-space: nowrap;
+        }
+        .buttongreen {
+            background-color: #69c477;
+            color: #fff;
+            border: none;
+        }
+        .systemname {
+            font-family: "Microsoft YaHei",微软雅黑, "Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+            color: #1679b7;
+            font-size: 20px;
+            font-weight:600;
+            position: absolute;
+            top: 37px;
+            left: 163px;
+        }
+
+        .systemnamebg {
+            position: absolute;
+            top: 35px;
+            left: 162px;
+            font-family: "Microsoft YaHei",微软雅黑, "Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+            color: #fff;
+            font-size: 20px;
+            font-weight:600;
+        }
+  .logo {
+            position: absolute;
+            top: 16px;
+            left: 26px;
+        }

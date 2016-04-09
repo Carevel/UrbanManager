@@ -1,0 +1,146 @@
+﻿body {
+}
+a {
+            color: #484848;
+}
+#divTaskInfoList {
+            margin: 39px 0px 0 16px;
+        }
+
+        .taskinfo {
+            width: 100%;
+            height: 100px;
+            color: #484848;
+            font-size: 13px;
+        }
+.overflowtd {
+            text-overflow:ellipsis; 
+            white-space: nowrap; 
+            overflow: hidden; 
+            
+            }
+
+
+        .headertdul {
+            margin: 0 0 0 -9px;
+            padding: 0;
+        }
+
+
+
+            .headertdul li {
+                float: left;
+                list-style: none;
+                margin-left: 4px;
+            }
+
+        .caseimg {
+            width: 58px;
+            height: 58px;
+            border: 1px solid #808080;
+        }
+
+        .div_a {
+            width: 85px;
+            float: left;
+        }
+
+            .div_a span {
+                position: relative;
+                top: 4px;
+                left: 11px;
+            }
+
+            .div_a ul {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+            }
+
+
+            .div_a li {
+                width: 85px;
+                height: 28px;
+                background: url(../Images_flat/tasklistimg/btnbg.jpg);
+                color: #fff;
+                cursor: pointer;
+                float: left;
+            }
+
+.lockbtn {
+
+background: url(../Images_flat/tasklistimg/btnbgdis.jpg);
+}
+
+        .div_a1 {
+            width: 85px;
+            position: relative;
+            background-color: #FFF;
+            top: -20px;
+            left: 0px;
+            z-index: 999;
+            display:none;
+            border-top: 1px solid #428bca;
+            border-bottom: 1px solid #428bca;
+        }
+
+        .div_a li:hover .div_a1 {
+            display: block;
+        }
+
+        .div_a1 ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            display:inline-block;
+        }
+
+            .div_a1 ul li {
+            }
+
+                .div_a1 ul li a {
+                    width: 83px;
+                    height: 28px;
+                    display: block;
+                    background-color: #fff;
+                    color: #428bca;
+                    text-decoration: none;
+                    border-left: 1px solid #428bca;
+                    border-right: 1px solid #428bca;
+                }
+
+                    .div_a1 ul li a:hover {
+                        background-color: #428bca;
+                        color: #fff;
+                    }
+
+                .div_a1 ul li span {
+                    position: relative;
+                    top: 4px;
+                    left: 11px;
+                }
+        .infoSourcespan {
+            font-weight:bold;
+            margin-left:16px;
+            color:#fff;
+            padding:2px 0 0 0px;
+            font-size:14px;
+            font-family:"Microsoft YaHei" ,微软雅黑, "Microsoft JhengHei" ,华文细黑,STHeiti,MingLiu;
+            white-space:nowrap;
+}
+.taskicon {
+    width:23px; 
+    height:23px;
+    margin:-2px 2px 0 0;
+
+}
+.watermarkdiv {
+width:100%;
+height:100px;
+white-space:nowrap;
+margin-top:-100px;
+}
+.watermarkdiv img {
+float:right;
+display:inline-block;
+}

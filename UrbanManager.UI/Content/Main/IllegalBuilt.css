@@ -1,0 +1,81 @@
+﻿body {
+}
+
+/*下拉操作按钮*/
+ .div_a {
+            width: 85px;
+            float: left;
+        }
+
+            .div_a span {
+                position: relative;
+                top: 4px;
+                left: 11px;
+
+            }
+
+            .div_a ul {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+            }
+
+
+            .div_a li {
+                width: 85px;
+                height: 28px;
+                background: url(../Images_flat/tasklistimg/btnbg.jpg);
+                color: #fff;
+                cursor: pointer;
+                /*float: left;*/
+                text-align:left;
+            }
+
+        .div_a1 {
+            width: 85px;
+            position: relative;
+            background-color: #FFF;
+            top: -20px;
+            left: 0px;
+            z-index: 999;
+            display:none;
+            border-top: 1px solid #428bca;
+            border-bottom: 1px solid #428bca;
+        }
+
+        .div_a li:hover .div_a1 {
+            display: block;
+        }
+
+        .div_a1 ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            display:inline-block;
+        }
+
+            .div_a1 ul li {
+            }
+
+                .div_a1 ul li a {
+                    width: 83px;
+                    height: 28px;
+                    display: block;
+                    background-color: #fff;
+                    color: #428bca;
+                    text-decoration: none;
+                    border-left: 1px solid #428bca;
+                    border-right: 1px solid #428bca;
+                    text-align:left;
+                }
+
+                    .div_a1 ul li a:hover {
+                        background-color: #428bca;
+                        color: #fff;
+                    }
+
+                .div_a1 ul li span {
+                    position: relative;
+                    top: 4px;
+                    left: 11px;
+                }

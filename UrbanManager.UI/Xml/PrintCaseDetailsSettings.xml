@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<printSettings>
+  <listItem id="01" name="打印GIS地图" />
+  <listItem id="02" name="打印上报图片" />
+  <listItem id="03" name="打印核查图片" />
+  <listItem id="04" name="案件发现信息" />
+  <listItem id="05" name="案件受理信息" />
+  <listItem id="06" name="案件回退受理信息" />
+  <listItem id="07" name="案件不受理信息" />
+  <listItem id="08" name="案件立案信息" />
+  <listItem id="09" name="案件回退立案信息" />
+  <listItem id="10" name="案件派遣信息" />
+  <listItem id="11" name="案件接单信息" />
+  <listItem id="12" name="案件处理信息" />
+  <listItem id="13" name="案件强行督办信息" />
+  <listItem id="14" name="案件中间督办信息" />
+  <listItem id="15" name="案件回退督办信息" />
+  <listItem id="16" name="案件结案信息" />
+  <listItem id="17" name="案件作废信息" />
+  <listItem id="18" name="案件回复市民信息" />
+  <listItem id="19" name="案件无法回访信息" />
+  <listItem id="20" name="案件中间批准延期信息" />
+  <listItem id="21" name="案件中间批准退单信息" />
+  <listItem id="22" name="案件上报核查信息" />
+  <listItem id="23" name="案件批准退单信息" />
+  <listItem id="24" name="案件收单信息" />
+  <listItem id="25" name="案件申请退单信息" />
+  <listItem id="26" name="案件退回收集信息" />
+  <listItem id="27" name="案件拒绝退单信息" />
+  <listItem id="28" name="案件中间批准缓办信息" />
+  <listItem id="29" name="案件中间再派遣信息" />
+  <listItem id="30" name="案件下发核查信息" />
+  <listItem id="31" name="案件拒绝延期信息" />
+  <listItem id="32" name="案件申请缓办信息" />
+  <listItem id="33" name="案件批准缓办信息" />
+  <listItem id="34" name="案件拒绝缓办信息" />
+  <listItem id="35" name="案件申请延期信息" />
+  <listItem id="36" name="案件批准延期信息" />
+  <listItem id="37" name="案件催办信息" />
+  <listItem id="38" name="案件再派遣信息" />
+  <listItem id="39" name="案件退回其他平台信息" />
+  <listItem id="40" name="案件催办（不需核查）信息" />
+  <listItem id="41" name="案件下发核实信息" />
+  <listItem id="42" name="案件上报核实信息" />
+  <listItem id="43" name="案件无需核查待结案信息" />
+  <listItem id="44" name="案件退单信息" />
+  <listItem id="45" name="案件反馈信息" />
+  <listItem id="46" name="案件热线回访信息" />
+
+</printSettings>
