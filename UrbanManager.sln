@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanManager.Domain", "Urba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanManager.Infrastructure", "UrbanManager.Infrastructure\UrbanManager.Infrastructure.csproj", "{91CD1250-8A32-4F53-964F-D286D2E6B8F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanManager.FileSystem", "UrbanManager.FileSystem\UrbanManager.FileSystem.csproj", "{B94B30AD-FB33-420C-BECD-D63477F72102}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{91CD1250-8A32-4F53-964F-D286D2E6B8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91CD1250-8A32-4F53-964F-D286D2E6B8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91CD1250-8A32-4F53-964F-D286D2E6B8F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B94B30AD-FB33-420C-BECD-D63477F72102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94B30AD-FB33-420C-BECD-D63477F72102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94B30AD-FB33-420C-BECD-D63477F72102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94B30AD-FB33-420C-BECD-D63477F72102}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
