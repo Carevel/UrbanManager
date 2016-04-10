@@ -54,6 +54,7 @@
     <Compile Include="Services\PowerManagerDomainService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Entities\Dtos\" />
     <Folder Include="IRepositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
