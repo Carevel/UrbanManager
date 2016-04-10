@@ -13,7 +13,10 @@ namespace UrbanManager.UI.Controllers
             var a = "test";
             return View();
         }
-
+        public ActionResult Alert()
+        {
+            return Content("Success()");
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
