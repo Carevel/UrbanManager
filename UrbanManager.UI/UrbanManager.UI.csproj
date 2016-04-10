@@ -592,7 +592,6 @@
     <Content Include="Scripts\Main\layer\skin\default\vssver2.scc" />
     <Content Include="Scripts\Main\layer\skin\vssver2.scc" />
     <Content Include="Scripts\Main\layer\vssver2.scc" />
-    <Content Include="Views\ViewPage1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
