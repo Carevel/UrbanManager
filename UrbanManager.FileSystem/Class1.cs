@@ -11,7 +11,7 @@ namespace UrbanManager.FileSystem
 
 
 
-
+        public string wh { get; set; }
 
 
 
